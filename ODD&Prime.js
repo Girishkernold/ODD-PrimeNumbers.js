@@ -1,4 +1,5 @@
-//one digit difference numbers between 1 to 10 million
+//JavaScript program to find the one-digit difference numbers between 1 to 10 million
+//with the Class ODDprimeNum
 
 
 class ODDprimeNum{
@@ -11,7 +12,7 @@ class ODDprimeNum{
     {
         if(number < 0)
         {
-            throw new Error("Enter positive numbers.")
+            console.log("Enter positive numbers.") //prints the statement when the number is not +ve
         }
 
     }
@@ -66,27 +67,26 @@ class ODDprimeNum{
     }
 }
 
-function PrintNums(){
-    try {
+function PrintNums()
+{
 
         let oddPrime = [] 
         ODD = new ODDprimeNum()
 
         
-        for(let inputNumber = 0; inputNumber <= 10000000; inputNumber++){   //To check between 0 to 10,000,000
-            if(ODD.isODDNumber(inputNumber) && ODD.isPrime(inputNumber)){
-                oddPrime.push(inputNumber)
+        for(let Givenrange = 0; Givenrange <= 10000000; Givenrange++)
+        {  
+            if(ODD.isODDNumber(Givenrange) && ODD.isPrime(Givenrange))
+            {
+                oddPrime.push(Givenrange)
             }
         }
 
-        console.log(`\nThe numbers are :${oddPrime.length}`)
+        console.log(`\nThe count of numbers are :${oddPrime.length}`)
         console.log(oddPrime)
 
-    } catch (error) {
 
-        console.log(`\nError: ${error.message}`)
 
-    }
 }
 
 PrintNums()
